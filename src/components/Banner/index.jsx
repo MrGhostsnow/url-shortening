@@ -5,12 +5,14 @@ import {
     SectionText
 } from './styles'
 
+import background from '../../assets/bg-boost-desktop.svg'
+
 function Banner() {
     return (
-        <ContainerBanner>
+        <ContainerBanner style={{ backgroundImage: `url(${background})` }}>
             <SectionText>
                 <Text>
-                    Simplify how your team works today.
+                    Boost your links today
                 </Text>
                 <Button>
                     Get Started
