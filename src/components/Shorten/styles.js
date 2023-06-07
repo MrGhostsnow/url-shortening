@@ -7,6 +7,7 @@ export const ContainerResultsShort = styled.div`
     right: 14rem;
     position: absolute;
     align-items: center;
+    bottom: -16rem;
 `;
 
 export const ContainerShorten = styled.div`
@@ -44,7 +45,7 @@ export const Button = styled.button`
 `;
 
 export const SectionResult = styled.div`
-
+    margin-top: 1rem;
     width: 950px;
     height: 80px;
     display: flex;

@@ -19,6 +19,7 @@ function Shorten() {
     const [linkformated, setLinkFormated] = useState([])
     const [linkOriginal, setLinkOriginal] = useState([])
     const [showWarning, setShowWarning] = useState(false)
+    const [showResult, setShowResult] = useState(false)
 
     const handleChange = (e) => {
         setShortLink(e.target.value)
@@ -32,6 +33,7 @@ function Shorten() {
             setLinkOriginal([link.result.original_link])
             setShortLink('')
             setShowWarning(false)
+            setShowResult(true)
         } else {
             setShowWarning(true)
         }
@@ -50,18 +52,19 @@ function Shorten() {
                 )}
                 <Button onClick={findShortLink}>Shorten it!</Button>
             </ContainerShorten>
-
-            <SectionResult>
-                <Original>
-                    {linkOriginal}
-                </Original>
-                <Result>
-                    {linkformated}
-                </Result>
-                <ButtonCopy>
-                    Copy
-                </ButtonCopy>
-            </SectionResult>
+            {showResult && (
+                <SectionResult>
+                    <Original>
+                        {linkOriginal}
+                    </Original>
+                    <Result>
+                        {linkformated}
+                    </Result>
+                    <ButtonCopy>
+                        Copy
+                    </ButtonCopy>
+                </SectionResult>
+            )}
         </ContainerResultsShort>
     )
 }

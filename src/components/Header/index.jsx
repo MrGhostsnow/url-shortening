@@ -24,7 +24,7 @@ function Header() {
                     <Image src={Working} />
                 </SectionImage>
             </SectionHeader>
-            {/* <Shorten /> */}
+            <Shorten />
         </>
     )
 }

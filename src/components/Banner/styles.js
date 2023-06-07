@@ -6,7 +6,6 @@ export const ContainerBanner = styled.div`
     align-items: center;
     background-color: hsl(257, 27%, 26%);
     height: 200px;
-    margin-top: 5rem;
     @media screen and (max-width: 542px) {
         display: flex;
         flex-direction: column;
