@@ -1,4 +1,3 @@
-import { Logo } from '../Header/styles';
 import {
     ContainerFooter,
     SectionOne,
@@ -11,7 +10,8 @@ import {
     SectionEmail,
     Input,
     Button,
-    Copyright
+    Copyright,
+    Logo
 } from './styles'
 
 import Logoicon from '../../assets/logo.svg'
@@ -26,12 +26,12 @@ function Footer() {
     return (
         <ContainerFooter>
             <SectionOne>
-                {/* <Logo src={Logoicon} alt='Logo' width={200} /> */}
+                <Logo src={Logoicon} />
                 <SectionSocials>
-                    {/* <Social src={FB} />
+                    <Social src={FB} />
                     <Social src={TT} />
                     <Social src={PR} />
-                    <Social src={IG} /> */}
+                    <Social src={IG} />
                 </SectionSocials>
             </SectionOne>
             <SectionTwo>
@@ -47,13 +47,6 @@ function Footer() {
                     <Option>Privacy Policy</Option>
                 </Options>
             </SectionTwo>
-            <SectionThree>
-                <SectionEmail>
-                    <Input type="text" name="email" placeholder='Updates in your box...' />
-                    <Button type="submit" value="Go" />
-                </SectionEmail>
-                <Copyright>Copyright 2020. All Rights Reserved</Copyright>
-            </SectionThree>
         </ContainerFooter>
     )
 }

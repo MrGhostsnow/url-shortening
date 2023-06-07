@@ -128,3 +128,5 @@ export const Copyright = styled.p`
     color: hsl(0, 0%, 98%);
     font-size: 12px;
 `;
+
+export const Logo = styled.img``;
