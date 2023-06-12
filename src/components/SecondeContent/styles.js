@@ -7,6 +7,14 @@ export const ContainerSecondContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: end;
+
+    @media screen and (max-width: 768px) {
+        height: 1200px;
+    }
+
+    @media screen and (max-width: 542px) {
+        height: 1500px;
+    }
 `;
 
 export const SectionText = styled.div`
@@ -30,7 +38,11 @@ export const SectionCards = styled.div`
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-bottom:4rem;
+    margin-bottom: 4rem;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const Image = styled.img`
@@ -47,6 +59,10 @@ export const FirstCard = styled.div`
     background-color: #fff;
     text-align: left;
     padding: 1rem;
+
+    @media screen and (max-width: 1024px) {
+        width: 250px;
+    }
 `;
 
 export const SecondCard = styled.div`
@@ -55,6 +71,10 @@ export const SecondCard = styled.div`
     background-color: #fff;
     text-align: left;
     padding: 1rem; 
+
+    @media screen and (max-width: 1024px) {
+        width: 250px;
+    }
     `;
 
 export const ThirdCard = styled.div`
@@ -63,6 +83,10 @@ export const ThirdCard = styled.div`
     background-color: #fff;
     text-align: left;
     padding: 1rem;
+
+    @media screen and (max-width: 1024px) {
+        width: 250px;
+    }
 `;
 
 export const TitleCard = styled.p`

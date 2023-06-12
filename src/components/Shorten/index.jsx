@@ -8,7 +8,8 @@ import {
     Warning,
     SectionResult,
     Original,
-    ButtonCopy
+    ButtonCopy,
+    Divider
 } from './styles'
 
 import background from '../../assets/bg-shorten-desktop.svg'
@@ -57,6 +58,7 @@ function Shorten() {
                     <Original>
                         {linkOriginal}
                     </Original>
+                    <Divider />
                     <Result>
                         {linkformated}
                     </Result>

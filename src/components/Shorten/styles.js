@@ -8,6 +8,13 @@ export const ContainerResultsShort = styled.div`
     position: absolute;
     align-items: center;
     bottom: -16rem;
+    @media screen and (max-width: 1024px) {
+        bottom: -24rem;
+        left: 14rem;
+    }
+    @media screen and (max-width: 768px) {
+        bottom: -38rem;
+    }
 `;
 
 export const ContainerShorten = styled.div`
@@ -22,6 +29,16 @@ export const ContainerShorten = styled.div`
     background-color: hsl(257, 27%, 26%);
     gap: 2rem;
     border-radius: 8px;
+
+    @media screen and (max-width: 768px) {
+        width: 630px;
+    }
+
+    @media screen and (max-width: 542px) {
+        flex-direction: column;
+        height: 150px;
+        width: 350px;
+    }
 `;
 
 export const Input = styled.input`
@@ -31,6 +48,14 @@ export const Input = styled.input`
     border: none;
     padding-left: 1rem;
     font-weight: 700;
+    @media screen and (max-width: 768px) {
+        width: 500px;
+        margin-left: 1rem;
+    }
+    @media screen and (max-width: 542px) {
+        width: 250px;
+        text-align: center;
+    }
 `;
 
 export const Button = styled.button`
@@ -42,6 +67,9 @@ export const Button = styled.button`
     width: 100px;
     font-weight: 700;
     font-size: 14px;
+    @media screen and (max-width: 768px) {
+        margin-right: 1rem;
+    }
 `;
 
 export const SectionResult = styled.div`
@@ -53,6 +81,14 @@ export const SectionResult = styled.div`
     justify-content: space-between;
     background-color: #fff;
     border-radius: 8px;
+
+    @media screen and (max-width: 768px) {
+        width: 630px;
+    }
+    @media screen and (max-width: 542px) {
+        flex-direction: column;
+        width: 350px;
+        height: 140px;
 `;
 
 export const Original = styled.span`
@@ -61,12 +97,22 @@ export const Original = styled.span`
     color: hsl(255, 11%, 22%);
     font-weight: 500;
     margin-left: 2rem;
+
+    @media screen and (max-width: 542px) {
+        text-align: center;
+        width: 350px;
+        margin-left: 0rem;
+        margin-top: 1rem;
+    }
 `;
 
 export const Result = styled.span`
     width: 200px;
     color: hsl(180, 66%, 49%);
     font-weight: 700;
+    @media screen and (max-width: 768px) {
+        margin-right: 1rem;
+    }
 `;
 
 export const Warning = styled.span`
@@ -74,6 +120,12 @@ export const Warning = styled.span`
     top: 4.5rem;
     left: 5rem;
     color: hsl(0, 87%, 67%);
+    @media screen and (max-width: 1024px) {
+        left: -8rem;
+    }
+    @media screen and (max-width: 542px) {
+        top: 3.7rem;
+    }
 `;
 
 export const ButtonCopy = styled.button`
@@ -91,6 +143,18 @@ export const ButtonCopy = styled.button`
     
     &:hover{
         opacity: 0.6;
+    }
+
+    @media screen and (max-width: 542px) {
+        margin-bottom: 1rem;
+    }
+`;
+
+export const Divider = styled.span`
+    display: none;
+    @media screen and (max-width: 542px) {
+        border: 1px solid red;
+        width: 350px;
     }
 `;
 

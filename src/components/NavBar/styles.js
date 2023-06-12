@@ -7,6 +7,12 @@ export const ContainerNavBar = styled.div`
     height: 50px;
     width: 80%;
     margin-left: 10rem;
+    @media screen and (max-width: 768px) {
+        margin-left: 5rem;
+    }
+    @media screen and (max-width: 542px) {
+        display: none;
+    }
 `;
 
 export const SectionPaths = styled.div`
