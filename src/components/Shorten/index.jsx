@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import copy from "copy-to-clipboard";
 import {
     ContainerShorten,
     Input,
@@ -9,6 +10,7 @@ import {
     SectionResult,
     Original,
     ButtonCopy,
+    ButtonCopied,
     Divider
 } from './styles'
 
@@ -21,6 +23,8 @@ function Shorten() {
     const [linkOriginal, setLinkOriginal] = useState([])
     const [showWarning, setShowWarning] = useState(false)
     const [showResult, setShowResult] = useState(false)
+    const [copyText, setCopyText] = useState('')
+    const [copied, setCopied] = useState(true)
 
     const handleChange = (e) => {
         setShortLink(e.target.value)
@@ -35,12 +39,18 @@ function Shorten() {
             setShortLink('')
             setShowWarning(false)
             setShowResult(true)
+            setCopyText([link.result.short_link]);
         } else {
             setShowWarning(true)
         }
     }
 
     console.log(linkOriginal)
+
+    const copyToClipboard = () => {
+        copy(copyText);
+        setCopied(false);
+    }
 
 
 
@@ -62,9 +72,15 @@ function Shorten() {
                     <Result>
                         {linkformated}
                     </Result>
-                    <ButtonCopy>
-                        Copy
-                    </ButtonCopy>
+                    {copied ? (
+                        <ButtonCopy onClick={copyToClipboard}>
+                            Copy
+                        </ButtonCopy>
+                    ) :
+                        <ButtonCopied >
+                            Copied!
+                        </ButtonCopied>
+                    }
                 </SectionResult>
             )}
         </ContainerResultsShort>

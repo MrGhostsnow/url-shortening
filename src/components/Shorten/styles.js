@@ -150,6 +150,28 @@ export const ButtonCopy = styled.button`
     }
 `;
 
+export const ButtonCopied = styled.button`
+    background-color:  hsl(257, 7%, 63%);
+    border: none;
+    border-radius: 8px;
+    height: 35px;
+    width: 130px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 1rem;
+
+    
+    &:hover{
+        opacity: 0.6;
+    }
+
+    @media screen and (max-width: 542px) {
+        margin-bottom: 1rem;
+    }
+`;
+
 export const Divider = styled.span`
     display: none;
     @media screen and (max-width: 542px) {
