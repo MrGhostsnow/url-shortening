@@ -7,7 +7,7 @@ export const ContainerResultsShort = styled.div`
     right: 14rem;
     position: absolute;
     align-items: center;
-    bottom: -16rem;
+    bottom: -19rem;
     @media screen and (max-width: 1024px) {
         bottom: -24rem;
         left: 14rem;
